@@ -374,7 +374,7 @@ func Download(d *gdrive.Drive, fileId string, stdout, deleteAfterDownload bool) 
 		return fmt.Errorf("An error occurred: %s", err)
 	}
 
-	fmt.Printf("Downloaded '%s' at %s, total %s\n", info.Title, getRate(bytes), util.FileSizeFormat(bytes))
+	fmt.Printf("Downlded '%s' at %s, total %s\n", info.Title, getRate(bytes), util.FileSizeFormat(bytes))
 
 	if deleteAfterDownload {
 		err = Delete(d, fileId)
